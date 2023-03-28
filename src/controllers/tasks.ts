@@ -22,7 +22,7 @@ export const createTask: Handler = (req, res) => {
         res.json(newTask)
 
     } catch (error: any) {
-        res.send(error.message)
+        res.status(500).send(error.message)
     }
 }
 
@@ -40,7 +40,7 @@ export const getTask: Handler = (req, res) => {
         return res.json(task)
 
     } catch (error: any) {
-        res.send(error.message)
+        res.status(500).send(error.message)
     }
 }
 
@@ -49,7 +49,7 @@ export const countTasks: Handler = (req, res) => {
         const tasksLength = getConnection().get('tasks').value().length
         res.json(tasksLength)
     } catch (error: any) {
-        res.send(error.message)
+        res.status(500).send(error.message)
     }
 }
 
@@ -67,7 +67,7 @@ export const deleteTask: Handler = (req, res) => {
         return res.json(deletedTask)
 
     } catch (error: any) {
-        res.send(error.message)
+        res.status(500).send(error.message)
     }
 }
 
@@ -91,6 +91,6 @@ export const updateTask: Handler = (req, res) => {
         return res.json(updatedTask)
 
     } catch (error: any) {
-        res.send(error.message)
+        res.status(500).send(error.message)
     }
 }
