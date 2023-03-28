@@ -29,19 +29,19 @@ const router = Router()
  *         description: Solve algebra and trigonometry problems
 */       
 
-/* 
-
-{
-  "id": "DyCMpGCLXWwMJJEXZCVnt",
-  "name": "Rediseñar mi sitio web",
-  "description": "Cambiar el diseño de un sitio web en wordpress, este sería un E-commerce"
-}*/
+/**
+ * @swagger
+ * tags:
+ *   name: Tasks
+ *   description: Tasks endpoint
+ */
 
 /**
  * @swagger
  * /tasks:
  *   get:
  *     summary: Returns a list of tasks
+ *     tags: [Tasks]
  *     responses:
  *       200:
  *         description: A list of tasks
@@ -50,10 +50,26 @@ const router = Router()
  *             schema:
  *               type: array
  *               items:
- *                 type: Object
+ *                 $ref: '#/components/schemas/Task'
 */
 router.get('/tasks', getTasks)
 
+/** 
+ * @swagger
+ * /tasks/count:
+ *   get: 
+ *     summary: Returns the total amount of the tasks
+ *     tags: [Tasks]
+ *     responses: 
+ *       200:
+ *         description: The total number of the amount 
+ *         content: 
+ *           text/plain:
+ *             schema:          
+ *               type: integer
+ *               example: 15
+ *           
+*/
 router.get('/tasks/count', countTasks)
 
 router.post('/tasks', createTask)
