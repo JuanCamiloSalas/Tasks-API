@@ -163,6 +163,34 @@ router.get('/tasks/:id', getTask)
  */
 router.delete('/tasks/:id', deleteTask)
 
+/**
+ * @swagger
+ * /tasks/{id}:
+ *   put:
+ *     summary: Updates a task by id
+ *     tags: [Tasks]
+ *     parameters:
+ *       - $ref: '#/components/parameters/taskId'
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/Task'     
+ *     responses:
+ *       200: 
+ *         description: The updated task
+ *         content:
+ *           application/json:
+ *             schema: 
+ *               $ref: '#/components/schemas/Task'
+ *       404:
+ *         description: The task was not found
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/TaskNotFound'
+ */
 router.put('/tasks/:id', updateTask)
 
 
