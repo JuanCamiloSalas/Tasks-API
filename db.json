@@ -1,11 +1,6 @@
 {
   "tasks": [
     {
-      "id": "aaHA3808LUgLcIU4J72lI",
-      "name": "crear una tabla de tareas",
-      "description": "Hacer una tabla en excel con tres columnas"
-    },
-    {
       "id": "DyCMpGCLXWwMJJEXZCVnt",
       "name": "Rediseñar mi sitio web",
       "description": "Cambiar el diseño de un sitio web en wordpress, este sería un E-commerce"
@@ -14,6 +9,11 @@
       "id": "qEoObEOhqUKhuTFE2O6if",
       "name": "Do cleaning in the house",
       "description": "Buy cleaning products, a mop, a broom and wash everything"
+    },
+    {
+      "id": "MmAsW0Pak1KIQNWY3iPgY",
+      "name": "Cambiar el titulo",
+      "description": "Description cambiada"
     }
   ]
 }
